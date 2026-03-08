@@ -1,0 +1,165 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | SurveyPro</title>
+
+<style>
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:'Segoe UI', Roboto, Arial;
+background:#f0f2f5;
+color:#334155;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#ffffff;
+border-bottom:1px solid #e2e8f0;
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#0f172a;
+}
+
+.logo span{
+color:#10b981;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#64748b;
+font-weight:500;
+}
+
+/* HERO SECTION */
+
+.container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:80px 8%;
+gap:40px;
+}
+
+.hero-text{
+flex:1;
+}
+
+.hero-text h1{
+font-size:3rem;
+color:#10b981;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:1.2rem;
+margin-bottom:30px;
+color:#475569;
+}
+
+.btn{
+padding:12px 24px;
+background:#10b981;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+display:inline-block;
+margin-right:10px;
+}
+
+/* CARD */
+
+.info-card{
+background:#ffffff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+max-width:400px;
+text-align:center;
+}
+
+.info-card h2{
+margin-bottom:20px;
+}
+
+footer{
+text-align:center;
+padding:20px;
+margin-top:40px;
+color:#64748b;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="logo">SURVEY<span>PRO</span></div>
+
+<ul class="nav-links">
+<li><a href="{% url 'home' %}">Home</a></li>
+<li><a href="{% url 'survey_list' %}">Surveys</a></li>
+<li><a href="{% url 'login' %}">Login</a></li>
+</ul>
+</nav>
+
+<div class="container">
+
+<div class="hero-text">
+<h1>Elevating Feedback</h1>
+
+<p>
+Welcome to our Online Survey System. This platform allows users to
+share feedback through surveys to help organizations improve their
+services and decision-making.
+</p>
+
+<a href="{% url 'login' %}" class="btn">Get Started</a>
+<a href="{% url 'survey_list' %}" class="btn">View Surveys</a>
+
+</div>
+
+<div class="info-card">
+
+<h2>Why Your Feedback Matters</h2>
+
+<p>
+Your responses help us understand experiences, identify improvements,
+and create better services for everyone.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 SurveyPro | Online Survey System
+</footer>
+
+</body>
+</html>
+```
